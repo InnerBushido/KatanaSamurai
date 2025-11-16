@@ -277,8 +277,8 @@ public class SwordCutterBehaviour : CutterBehaviour
 
         foreach(var obj in cData.CreatedObjects)
         {
-            // var destroyScript = obj.AddComponent<DestroyAfterTime>();
-            // destroyScript.Initialize(30);
+            var destroyScript = obj.AddComponent<DestroyAfterTime>();
+            destroyScript.Initialize(5);
         }
     }
 
