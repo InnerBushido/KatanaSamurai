@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ThrowTatami : MonoBehaviour {
 
@@ -9,6 +10,10 @@ public class ThrowTatami : MonoBehaviour {
     // public AnimationClip attackAnim;
     // public AnimationClip throwAnim;
 
+    public Image senseiImage;
+    public Sprite senseiSpriteIdle;
+    public Sprite senseiSpriteThrow;
+
     public int upForce = 60;
     public int zForce = 140;
 
@@ -17,6 +22,8 @@ public class ThrowTatami : MonoBehaviour {
     void Start()
     {
         StartCoroutine(StartThrowing());
+        
+        senseiImage.sprite = senseiSpriteIdle;
     }
 
     IEnumerator StartThrowing()
@@ -31,7 +38,7 @@ public class ThrowTatami : MonoBehaviour {
     IEnumerator KeepThrowing()
     {
         StartCoroutine(ThrowOnce());
-        yield return new WaitForSeconds(Random.Range(1.5f, 5f));
+        yield return new WaitForSeconds(Random.Range(1f, 4f));
         StartCoroutine(KeepThrowing());
     }
 
@@ -41,10 +48,12 @@ public class ThrowTatami : MonoBehaviour {
         // charAnimation.clip = throwAnim;
         // charAnimation.Play();
         // charAnimation.wrapMode = WrapMode.PingPong;
+        
+        senseiImage.sprite = senseiSpriteThrow;
 
         GetComponent<AudioSource>().Play();
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
 
         currentTatami.transform.parent = null;
         currentTatami.GetComponent<Rigidbody>().isKinematic = false;
@@ -79,10 +88,12 @@ public class ThrowTatami : MonoBehaviour {
         currentTatami.GetComponent<Rigidbody>().AddForce(Vector3.up * upForce);
         // currentTatami.GetComponent<Rigidbody>().AddRelativeTorque(new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f)) * Random.Range(2f, 10f));
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.75f);
         // charAnimation.clip = idleAnim;
         // charAnimation.Play();
         // charAnimation.wrapMode = WrapMode.Loop;
+        
+        senseiImage.sprite = senseiSpriteIdle;
 
         //currentTatami = Instantiate(tatamiPrefab);
         currentTatami = (GameObject)Instantiate(tatamiPrefab, gameObject.transform.position, tatamiPrefab.transform.rotation);
