@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using DynamicMeshCutter;
+using Random = UnityEngine.Random;
 
 public class SwordCutterBehaviour : CutterBehaviour
 {
@@ -278,7 +279,13 @@ public class SwordCutterBehaviour : CutterBehaviour
         foreach(var obj in cData.CreatedObjects)
         {
             var destroyScript = obj.AddComponent<DestroyAfterTime>();
-            destroyScript.Initialize(5);
+            destroyScript.Initialize(2);
+
+            Rigidbody rb = obj.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.AddRelativeTorque(new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f)) * Random.Range(2f, 10f));
+            }
         }
     }
 
