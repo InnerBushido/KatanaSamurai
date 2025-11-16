@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/KatanaSamurai/Scenes/KatanaSamuraiUI_Intro.unity
     guid: 1dac1436f2a1c1e47afd521e995ed0ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/KatanaSamurai/Scenes/KatanaSamuraiGameplay.unity
     guid: 9edbd85e3d189544c9d3d4512271c914
   - enabled: 1

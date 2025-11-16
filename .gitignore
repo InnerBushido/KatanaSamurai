@@ -100,3 +100,5 @@ InitTestScene*.unity*
 /Assets/Evil Spirit Katana
 /Assets/Nature Assets - Bamboo Pack
 /Assets/DynamicMeshCutter
+Assets/KatanaSamurai/UI/Scripts/RayCastEventDetecter.cs
+Assets/KatanaSamurai/UI/Scripts/RayCastEventDetecter.cs.meta
