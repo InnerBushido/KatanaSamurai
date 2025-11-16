@@ -3947,7 +3947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4169347665373646829, guid: fb3d5c7e72e30fd4ab7668b8f23689aa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7480636408319385107, guid: fb3d5c7e72e30fd4ab7668b8f23689aa, type: 3}
@@ -12615,7 +12615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70684123cdcd7624082dfea8f1b3011b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SwordToFollow: {fileID: 1727690545}
+  m_SwordToFollow: {fileID: 788352164}
 --- !u!4 &636941205246041928
 Transform:
   m_ObjectHideFlags: 0
@@ -14830,7 +14830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4169347665373646829, guid: fb3d5c7e72e30fd4ab7668b8f23689aa, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7480636408319385107, guid: fb3d5c7e72e30fd4ab7668b8f23689aa, type: 3}
