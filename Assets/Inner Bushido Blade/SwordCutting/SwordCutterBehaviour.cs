@@ -237,9 +237,9 @@ public class SwordCutterBehaviour : CutterBehaviour
         }
 
 
-        //Debug.Log("CUT MESH CALLED");
-        //Cut(meshTarget, transform.position, transform.forward, null, OnCreated);
-        Cut(meshTarget, m_ExitPoint, Vector3.Cross(m_VectorBetweenCuts, crossOfZ), OnCutWithSword, OnCreated);
+        Debug.Log("CUT MESH CALLED");
+        Cut(meshTarget, transform.position, transform.forward, null, OnCreated);
+        // Cut(meshTarget, m_ExitPoint, Vector3.Cross(m_VectorBetweenCuts, crossOfZ), OnCutWithSword, OnCreated);
     }
 
     void OnCutWithSword(bool success, Info info)
