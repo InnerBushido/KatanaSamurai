@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/KatanaSamurai/Scenes/StartScene.unity
     guid: 5beb73bda4f12bf4a815176b2996cc2e
+  - enabled: 1
+    path: Assets/KatanaSamurai/Scenes/BambooCuttingTest.unity
+    guid: bb9fc5f6fb58038459c3ed9c24d87fc7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a14796bc0afb90942ad701bff0089ba1, type: 2}
