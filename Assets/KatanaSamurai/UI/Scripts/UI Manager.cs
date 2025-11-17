@@ -28,6 +28,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private CanvasGroup startScreenCanvas;
     [SerializeField] private CanvasGroup logoImage;
     [SerializeField] private CanvasGroup buttonObject;
+    [SerializeField] private CanvasGroup movieObject;
     [SerializeField] private UnityEvent startScreenStartEvent;
     [SerializeField] private UnityEvent startScreenEndEvent;
     
@@ -70,6 +71,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private UnityEvent tutorialCompleteEndEvent;
     [SerializeField] private UnityEvent tutorialScreenEndEvent;
 
+    public void StartMovie()
+    {
+        SceneManager.LoadScene("MovieScene");
+    }
+    
     public void SetControllerEnabled(bool _enabled)
     {
         m_ControllerSelected = _enabled;
@@ -266,6 +272,7 @@ public class UIManager : MonoBehaviour
         startScreenCanvas.gameObject.SetActive(true);
         startScreenCanvas.alpha = 1;
         LeanTween.alphaCanvas(buttonObject, 1f, 1f).setDelay(2f);
+        LeanTween.alphaCanvas(movieObject, 1f, 1f).setDelay(2f);
         LeanTween.alphaCanvas(logoImage, 1f, 1f);
         LeanTween.moveLocalX(logoImage.gameObject, 0f, 0.25f).setFrom(-100f).setOnComplete(() =>
         {
